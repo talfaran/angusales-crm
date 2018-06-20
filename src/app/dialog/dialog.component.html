@@ -1,0 +1,69 @@
+<!-- view only mode dialog -->
+
+<div class="edit-dialog" *ngIf="editDialog == true">
+    <h2 mat-dialog-title>Customer Details: View Only Mode</h2>
+
+
+    <mat-dialog-content>
+        <p>
+            <strong>First Name: </strong> {{description.firstName}}
+        </p>
+
+        <p>
+            <strong>Last Name: </strong>{{description.lastName}}
+        </p>
+
+        <br>
+        <div class="commentText">
+            <input matInput [(ngModel)]="commentText" placeholder="write Comment Here:">
+          
+        </div>
+        <br>
+        <div class="customerComments" *ngFor="let comment of customerComments">
+           
+               <p class="comment-element">{{comment.text}}</p>
+               <button mat-mini-fab color="warn" class ="dlt-comment"><i class="fa fa-trash fa-0.5x"></i></button>
+            
+        </div>
+
+
+
+    </mat-dialog-content>
+
+
+    <mat-dialog-actions>
+        <button class="mat-raised-button mat-primary" (click)="addComment()">ADD COMMENT</button>        
+        <button class="mat-raised-button" (click)="close()">Close</button>
+    </mat-dialog-actions>
+
+</div>
+
+
+
+
+<!-- editing mode dialog -->
+
+
+<div class="edit-dialog" *ngIf="editDialog == false">
+    <h2 mat-dialog-title>Customer Details: Edit Mode</h2>
+
+    <mat-dialog-content [formGroup]="form">
+
+        <mat-form-field>
+            <input matInput placeholder="{{description.firstName}}" formControlName="id">
+        </mat-form-field>
+        <mat-form-field>
+            <input matInput placeholder="first name" formControlName="firstName">
+        </mat-form-field>
+        <mat-form-field>
+            <input matInput placeholder="last name" formControlName="lastName">
+        </mat-form-field>
+
+    </mat-dialog-content>
+
+    <mat-dialog-actions>
+        <button class="mat-raised-button" (click)="close()">Close</button>
+        <button class="mat-raised-button mat-primary" (click)="save()">Save</button>
+    </mat-dialog-actions>
+
+</div>

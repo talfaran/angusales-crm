@@ -1,0 +1,27 @@
+.commentText {
+    border-radius: 10px;
+    border: 2px solid rgb(4, 4, 116);
+    padding: 2.5%;
+}
+
+.customerComments {
+    display: grid;
+    grid-template-columns: 85% 15%;
+    grid-column-gap: 5px;
+    
+}
+
+.comment-element {
+    grid-column: 1 / 2;
+    font-size: 15px;
+    font-family: 'Segoe UI', Tahoma, Verdana, sans-serif;
+    background-color: rgb(165, 165, 172);
+    padding: 2.5%;
+    border-radius: 20px;
+}
+
+.dlt-comment {
+    grid-column: 2 / 3;
+    margin-top: 25%;
+    margin-left: 2%;
+}

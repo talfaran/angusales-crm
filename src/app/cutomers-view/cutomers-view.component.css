@@ -1,0 +1,17 @@
+.customers-table {
+    width: 80%;
+    grid-column: 1 / 2;
+}
+
+.customers-grid {
+    display: grid;
+    grid-template: auto / 4fr 1fr;
+}
+
+.options {
+    margin: 0;
+}
+
+.add-customer{
+    grid-column: 2 / 3;
+}

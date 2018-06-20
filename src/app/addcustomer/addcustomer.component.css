@@ -1,0 +1,22 @@
+.add-customer-grid {
+    /* border: 1px solid black; */
+    margin: auto;
+}
+
+.add-button {
+    margin: auto;
+    background-color: rgb(49, 167, 33);
+    border-radius: 20px;
+    padding-left: 30px;
+    font-size: 20px;
+}
+
+.form {
+    border-radius: 15px;
+    background-color: rgb(184, 193, 231);
+    padding-left:25px;
+}
+
+.plus-btn {
+    align-content: right;
+}
